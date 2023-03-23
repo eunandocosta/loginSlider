@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    background-color: #e9c46a;
+    gap: 10px;
+    justify-content: center;
+}
+.title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #2a9d8f;
+}
+.inputArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.inputLabel{
+    width: 40%;
+    outline: 0;
+    height: 30px;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    border: solid 1px #00000073;
+    background-color: rgba(0, 0, 0, 0.164);
+    color: black;
+    font-size: large;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    background-color: #2a9d8f;
+    border-radius: 5px;
+    color: #264653;
+    cursor: pointer;
+    font-size: large;
+}
+.btn:hover{
+    animation-name: backgroundAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border: 0px;
+}
+
+@keyframes backgroundAnimation {
+    0%{background-color: #2a9d8f; color: #ff896b}
+    50%{background-color: #0d3631; color: #ff896b}
+    100%{background-color: #2a9d8f; color: #ff896b};
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    background-color: #264653;
+    gap: 10px;
+    justify-content: center;
+}
+
+.hider{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff896b;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.7) 0 0 20px;
+}
+
+.sliderBtn{
+    background-color: #ff896b;
+    border: #0d3631 1px solid;
+    color: #0d3631;
+}
+
+@keyframes slider0 {
+    0%{left:0%}
+    100%{left: 50%}
+}
+
+@keyframes slider50 {
+    0%{left:50%}
+    100%{left: 0%}
+}

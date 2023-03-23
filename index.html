@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="register">
+            <div class="title">
+                <h1>Registro</h1>
+            </div>
+            <div class="inputArea">
+                <input class="inputLabel" placeholder="Digite seu nome"/>
+                <input class="inputLabel" placeholder="Digite seu email"/>
+                <input class="inputLabel" placeholder="Digite sua senha"/>
+            </div>
+            <div class="buttonArea">
+                <button class="btn">Registrar-se</button>
+            </div>
+        </div>
+        <div class="login">
+            <div class="title">
+                <h1>Login</h1>
+            </div>
+            <div class="inputArea">
+                <input class="inputLabel" placeholder="Digite seu email"/>
+                <input class="inputLabel" placeholder="Digite sua senha"/>
+            </div>
+            <div class="buttonArea">
+                <button class="btn">Registrar-se</button>
+            </div>
+        </div>
+        <div class="hider" id="hiderSlider">
+            <div class="hiderSliderBtn">
+                <button class="btn sliderBtn" id="btnSlider">Registrar-se</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var btnSlider = document.getElementById('btnSlider')
+        var hiderSlider = document.getElementById('hiderSlider')
+        
+        function slide(){
+            console.log('slide')
+            var btnSlider
+            btnSlider = document.getElementById('btnSlider')
+            let hiderSlider
+            hiderSlider = document.getElementById('hiderSlider');
+            if (hiderSlider.style.left=== '0%' || hiderSlider.style.animationName === 'slider0'){
+                hiderSlider.style.animationName = 'slider50'
+                hiderSlider.style.animationDuration = '0.7s'
+                hiderSlider.style.animationFillMode = 'forwards'
+                hiderSlider.style.animationTimingFunction = 'ease-in-out'
+                btnSlider.textContent = 'Registrar-se'
+            } else {
+                hiderSlider.style.animationName = 'slider0'
+                hiderSlider.style.animationDuration = '0.7s'
+                hiderSlider.style.animationFillMode = 'forwards'
+                hiderSlider.style.animationTimingFunction = 'ease-in-out'
+                btnSlider.textContent = 'Logar-se'
+            };
+        }
+
+        btnSlider.addEventListener("click", slide);
+        
+    </script>
+</body>
+</html>
